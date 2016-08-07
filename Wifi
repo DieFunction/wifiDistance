@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo iwlist wlp3s0 scan > /tmp/Wifi.txt
+essidLine=$(grep -n "$1" /tmp/Wifi.txt |cut -f1 -d:)
+dbm=$(awk 'FNR == '"$essidLine-2"' { print $3 }' /tmp/Wifi.txt|cut -d = -f2)
+freqMhz=$(awk 'FNR == '"$essidLine-3"' { print $1 }' /tmp/Wifi.txt|cut -d : -f2)
+echo "$dbm"
+echo "$freqMhz"
+rm /tmp/Wifi.txt
