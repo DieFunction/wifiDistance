@@ -1,6 +1,9 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+//www.DieFunction.com
+//www.DieFunction.com
+//www.DieFunction.com
+//www.DieFunction.com
 public final class Wifi {
 	private Process processor;
 	private BufferedReader br;
